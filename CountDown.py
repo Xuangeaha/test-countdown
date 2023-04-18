@@ -4,8 +4,8 @@ import tkinter as tk
 from datetime import datetime
 
 ##################################################
-test_title = "语文"
-start_time = [2023, 4, 19, 21, 5, 00]
+test_title = "01 语文"
+start_time = [2023, 4, 20, 8, 00, 00]
 ##################################################
 
 root = tk.Tk()
