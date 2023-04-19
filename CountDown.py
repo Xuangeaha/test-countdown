@@ -6,8 +6,8 @@ import tkinter as tk
 ##################################################
 test_title = "01 语文"
 test_title_next = "02 综合测试"
-start_time = [2023, 4, 20, 20, 20, 00]
-end_time = [2023, 4, 19, 20, 31, 00]
+start_time = [2023, 4, 20, 8, 00, 00]
+end_time = [2023, 4, 20, 9, 40, 00]
 ##################################################
 
 root = tk.Tk()
@@ -71,12 +71,14 @@ def update():
                 label['text'] = "  下一场  -  " + test_title_next + "  "
                 countdown['text'] = time.strftime('%H:%M:%S',time.localtime(time.time()))
 
-        time.sleep(0.1)
+        print(test_title, datetime.datetime.now(), "START", datetime_start_time, "DELTA", datetime_start_time - datetime.datetime.now(), "END", datetime_end_time, "DELTA", datetime_end_time - datetime.datetime.now())
+        
+        time.sleep(0.05)
 
-label = tk.Label(text="  下一场  -  " + test_title + "  ", justify="center", font=("华文细黑", 30), background='white')
+label = tk.Label(text="  下一场  -  " + test_title + "  ", justify="center", font=("华文细黑", 26), background='white')
 label.pack()
 
-countdown = tk.Label(text="加载中", justify="center", font=("华文细黑", 30), background='white')
+countdown = tk.Label(text="加载中", justify="center", font=("华文细黑", 26), background='white')
 countdown.pack()
 
 update_thread = threading.Thread(target=update)
@@ -84,7 +86,7 @@ update_thread.start()
 
 menubar = tk.Menu(root)
 root.config(menu=menubar)
-menubar.add_cascade(label="动态时钟")
+menubar.add_cascade(label="动态时钟 2.0")
 menubar.add_cascade(label="By 0615XZX")
 
 exitMenu = tk.Menu(menubar, tearoff=0)
