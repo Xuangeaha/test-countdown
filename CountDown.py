@@ -35,9 +35,9 @@ def update():
         countdown['text'] = tick_show
         time.sleep(0.05)
 
-label = tk.Label(text="距 二模 | " + test_title + "：", justify="center", font=("华文细黑", 20), background='white').pack()
+label = tk.Label(text="  下一场 - " + test_title + "  ", justify="center", font=("华文细黑", 30), background='white').pack()
 
-countdown = tk.Label(text="加载中", justify="center", font=("华文细黑", 20), background='white')
+countdown = tk.Label(text="加载中", justify="center", font=("华文细黑", 30), background='white')
 countdown.pack()
 
 update_thread = threading.Thread(target=update)
