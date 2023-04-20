@@ -4,10 +4,10 @@ import threading
 import tkinter as tk
 
 ##################################################
-test_title = "01 语文"
-test_title_next = "02 综合测试"
-start_time = [2023, 4, 20, 8, 00, 00]
-end_time = [2023, 4, 20, 9, 40, 00]
+test_title = "04 英语"
+test_title_next = "05 数学"
+start_time = [2023, 4, 21, 8, 00, 00]
+end_time = [2023, 4, 21, 9, 30, 00]
 ##################################################
 
 root = tk.Tk()
@@ -38,7 +38,7 @@ def update():
         test_waiting = datetime_start_time - datetime.timedelta(minutes=15) < datetime.datetime.now() < datetime_start_time
         test_doing = datetime_start_time < datetime.datetime.now() < datetime_end_time - datetime.timedelta(minutes=10)
         test_ending = datetime_end_time - datetime.timedelta(minutes=10) < datetime.datetime.now() < datetime_end_time
-        test_ended = datetime_end_time < datetime.datetime.now() < datetime_end_time + datetime.timedelta(minutes=3)
+        test_ended = datetime_end_time < datetime.datetime.now() < datetime_end_time + datetime.timedelta(minutes=2)
 
         if test_waiting:
             label['foreground'] = "blue"
